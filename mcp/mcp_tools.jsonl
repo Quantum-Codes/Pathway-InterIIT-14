@@ -1,4 +1,0 @@
-{"name": "get_constant_value", "description": "Returns 100"}
-{"name": "add", "description": "Adds two numbers"}
-{"name": "compare", "description": "Compares x <= y"}
-{"name": "list_tools", "description": "Lists available tools"}

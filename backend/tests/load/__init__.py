@@ -1,3 +1,0 @@
-"""
-Load and performance tests
-"""
