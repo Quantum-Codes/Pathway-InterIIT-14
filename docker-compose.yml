@@ -1,0 +1,98 @@
+version: '3.8'
+
+services:
+  # --- Kafka Service (from File 1) ---
+  broker:
+    image: confluentinc/cp-kafka:latest
+    container_name: broker
+    ports:
+      # Expose client port (9092) to the host machine (WSL2)
+      - "9092:9092"
+    environment:
+      # --- Networking & Listeners ---
+      KAFKA_NODE_ID: 1
+      KAFKA_INTER_BROKER_LISTENER_NAME: INTERNAL
+      KAFKA_PROCESS_ROLES: broker,controller
+
+      # Define listeners: INTERNAL (Docker-to-Docker), EXTERNAL (Host-to-Docker), CONTROLLER
+      KAFKA_LISTENERS: INTERNAL://broker:29092,EXTERNAL://0.0.0.0:9092,CONTROLLER://broker:29093
+
+      # Advertised listeners: EXTERNAL must be localhost for the host client to connect
+      KAFKA_ADVERTISED_LISTENERS: INTERNAL://broker:29092,EXTERNAL://localhost:9092
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+
+      # CRITICAL FIX: Define security protocols for ALL named listeners
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP:
+        CONTROLLER:PLAINTEXT,
+        INTERNAL:PLAINTEXT,
+        EXTERNAL:PLAINTEXT
+
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@broker:29093
+
+      # --- KRaft Configuration & Other Settings ---
+      KAFKA_CLUSTER_ID: "4r4zNn9n4m3R4x8e8g1m6o890000"
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+      KAFKA_NUM_PARTITIONS: 3
+
+    command:
+      - /bin/sh
+      - -c
+      - |
+        /usr/bin/kafka-storage format --ignore-formatted -t ${KAFKA_CLUSTER_ID} -c /etc/kafka/server.properties
+        /etc/confluent/docker/run
+
+    volumes:
+      - kafka-data:/var/lib/kafka/data
+
+  # --- Postgres Service (from File 2) ---
+  postgres:
+    container_name: db_tuto_postgres
+    image: postgres:13
+    ports: 
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=values_db
+      - PGPASSWORD=password
+    # CRITICAL CDC SETTINGS: Enables logical decoding for Debezium
+    command: 
+      - postgres 
+      - -c 
+      - wal_level=logical 
+      - -c 
+      - max_wal_senders=8 
+      - -c 
+      - max_replication_slots=8
+    volumes:
+      - ./debezium_setup/init-db.sql:/docker-entrypoint-initdb.d/init-db.sql
+      - ./debezium_setup/update_db.sh:/update_db.sh
+
+  # --- Debezium Service (from File 2, with modifications) ---
+  debezium:
+    container_name: db_tuto_debezium
+    image: quay.io/debezium/connect
+    ports:
+      # Expose Connect REST API for creating connectors
+      - "8083:8083"
+    environment:
+      # --- CRITICAL CHANGE ---
+      # Now connects directly to the 'broker' service on its internal port.
+      BOOTSTRAP_SERVERS: broker:29092
+      # --- End Change ---
+      GROUP_ID: 1
+      CONFIG_STORAGE_TOPIC: connect_configs
+      OFFSET_STORAGE_TOPIC: connect_offsets
+      STATUS_STORAGE_TOPIC: connect_statuses
+      CONNECT_REST_ADVERTISED_HOST_NAME: debezium
+    volumes:
+      - ./debezium_setup/connector.sh:/kafka/connector.sh
+    # Wait for both Postgres AND Kafka broker to be ready
+    depends_on: [postgres, broker]
+
+# --- Top-level volumes (from File 1) ---
+volumes:
+  kafka-data:
