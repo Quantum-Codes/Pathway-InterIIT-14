@@ -1,0 +1,22 @@
+{
+  "annual_income": "",
+  "applicant_email": "",
+  "applicant_mobile_number": "",
+  "applicant_name_prefix": "my.",
+  "current_address": "123 abcd street\nxyz\naustralia qwertyuiop abcdefghij 123456",
+  "date_of_birth": "01-01-1991",
+  "father_name_prefix": "mr",
+  "gender": "m-male",
+  "marital_status": "married",
+  "mother_name_prefix": "mys",
+  "nationality": "in-indian",
+  "occupation": "b-business",
+  "passport_number": "abi2cd34",
+  "permanent_address": "",
+  "residential_status": "resident individual",
+  "sources_of_income": [],
+  "unique_identification_number": "",
+  "applicant_name": "nirav modi",
+  "father_name": "mark dde",
+  "mother_name": "reena doe"
+}

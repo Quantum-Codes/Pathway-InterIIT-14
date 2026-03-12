@@ -1,0 +1,656 @@
+{
+  "risk_score": 100,
+  "risk_classification": "CRITICAL",
+  "match_found": true,
+  "summary": "The analysis of the entity \"Nirav Modi\" reveals a critical risk classification with a risk score of 100. The findings indicate that Nirav Modi is associated with the Punjab National Bank Scam, a significant financial fraud case involving a letter of undertaking worth \u20b912,000 crore (US$1.4 billion). Multiple web sources, including Wikipedia and Business Standard, provide detailed information about the scandal, with authenticity scores ranging from 0.70. The articles mention Nirav Modi's involvement and the legal proceedings against him, including a CBI court pardon for his brother-in-law. The high risk score and critical classification are justified by the severity of the fraud and the credible sources reporting on the case."
+}{
+  "risk_score": 0.537,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": "The analysis of Nirav Modi reveals a parsed Open Sanctions count N of 0, resulting in a sanction_score of 0.000. The web_evidence_score is 0.419, derived from 3 articles with authenticity scores of 0.70 each and mapped to a severity of 0.3 (negative_media). The match_confidence is 1.0. Applying the formula final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk_score is 0.537, classified as HIGH. The primary driver of the risk score is the web evidence."
+}{
+  "risk_score": 0.311,
+  "risk_classification": "MEDIUM",
+  "match_found": true,
+  "summary": "The analysis of the entity \"Rajinikanth\" yielded a final risk score of 0.311, classified as MEDIUM. The parsed Open Sanctions count N was 0, resulting in a sanction_score of 0.0. The web_evidence_score was calculated as 0.309 based on 3 contributing articles, with the strongest article scoring 0.805 (authenticity 0.85 * severity 0.95 for a conviction). The match_confidence was 0.745. The final risk score was computed using the formula: 0.0 * 0.60 + 0.309 * 0.30 + 0.745 * 0.10, rounded to 0.311. The primary driver of the risk score was web evidence."
+}{
+  "risk_score": 0.618,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": null
+}{
+  "risk_score": 0.0,
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of the entity \"User2961\" resulted in a risk score of 0.000, classified as LOW. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. No relevant web articles were found, resulting in a web_evidence_score of 0.000. The match confidence is 0.000 as no top match was found. Using the formula: final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk score is 0.000. The primary driver of this risk score is the absence of any sanctions, web evidence, or match confidence."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of the entity \"User1713\" resulted in a final risk score of 0.000, classified as LOW. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. There are no relevant web articles found, resulting in a web_evidence_score of 0.000. The match confidence is 0.000 as no top match was found. Using the formula: final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk score is 0.000. The primary driver in this case is the absence of any sanctions, web evidence, or match confidence."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of entity User9147 yielded a parsed Open Sanctions count N of 0, resulting in a sanction_score of 0.000. No relevant web articles were found, leading to a web_evidence_score of 0.000. The match confidence was 0.000 due to the absence of a top match. Using the formula final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk_score is 0.000, classified as LOW. The primary driver in this case is the absence of any sanctions or web evidence."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of the entity \"User5846\" resulted in a final risk score of 0.000, classified as LOW. The parsed Open Sanctions count N was 0, leading to a sanction_score of 0.000. No relevant web articles were found, resulting in a web_evidence_score of 0.000. The match confidence was 0.000 due to the absence of a top match. The final risk score was computed using the formula: sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10. The primary driver of the risk score is the absence of any sanctions or web evidence."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of the entity \"User2619\" resulted in a parsed Open Sanctions count N of 0, leading to a sanction_score of 0.000. No relevant web articles were found, resulting in a web_evidence_score of 0.000. The match confidence was 0.000 due to the absence of a top match and a null Score01. Using the formula final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk_score is 0.000, classified as LOW. The single strongest driver in this case is \"sanctions\"."
+}{
+  "risk_score": 0.0,
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of the entity \"User5324\" resulted in a final risk score of 0.000, classified as LOW. The parsed Open Sanctions count N was 0, leading to a sanction_score of 0.000. No relevant web articles were found, resulting in a web_evidence_score of 0.000. The match confidence was 0.000 due to the absence of a top match. Using the formula: final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final risk score was calculated to be 0.000. The primary driver in this case was the absence of any sanctions or web evidence."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of User5383 resulted in a final risk score of 0.000, classified as LOW. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. There are no relevant web articles, resulting in a web_evidence_score of 0.000. The match confidence is 0.000 due to the absence of a top match. Using the formula final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final risk score is 0.000. The primary driver in this case is the absence of any sanctions or web evidence. No match was found."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis for entity \"User4276\" resulted in a final risk score of 0.000, classified as LOW risk. The parsed Open Sanctions count N was 0, leading to a sanction_score of 0.000. No web articles were found, resulting in a web_evidence_score of 0.000. The match confidence was 0.000 due to the absence of a top match. Using the formula: final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk score is 0.000. No match was found, and the primary driver for this classification is the absence of any sanctions, web evidence, or match confidence."
+}{
+  "risk_score": 0.0,
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of the entity \"User4331\" resulted in a final risk score of 0.000, classified as LOW. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. The web_evidence_score is 0.000 as no relevant web articles were found. The match_confidence is 0.000 due to the absence of a top match. The final risk score is computed using the formula: final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10. The primary driver of the risk score is the absence of any sanctions or web evidence. No match was found."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis for entity \"User293\" resulted in a risk score of 0.000, classified as LOW. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. There are no relevant web articles, resulting in a web_evidence_score of 0.000. The match confidence is 0.000 due to the absence of a top match. Using the formula: final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk score is 0.000. The primary driver for this risk score is the absence of any sanctions or web evidence."
+}{
+  "risk_score": 0.513,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": "The analysis for Nirav Modi yielded a final risk score of 0.513, classified as HIGH. The parsed Open Sanctions count N was 0, resulting in a sanction_score of 0.0. The web_evidence_score was 0.487, derived from 3 articles with types inferred as \"negative_media\" (severity 0.3), contributing to a probabilistic union of evidence. The match_confidence was 1.0. The formula used was final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, with the primary driver being web evidence."
+}{
+  "risk_score": 0.6,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": "The analysis of Nirav Modi yielded a final risk score of 0.600, classified as HIGH. The parsed Open Sanctions count N was 0, resulting in a sanction_score of 0.000. The web_evidence_score was calculated as 0.600 based on 3 articles, with the strongest article contributing a score of 0.665 (negative_media type with authenticity 0.70). The match_confidence was 1.000. The final risk score was computed using the formula: 0.000 * 0.60 + 0.600 * 0.30 + 1.000 * 0.10. The primary driver of the risk score was web evidence."
+}{
+  "risk_score": 0.5,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": "The analysis of Nirav Modi yielded a final risk score of 0.500, classified as HIGH. The parsed Open Sanctions count N was 0, resulting in a sanction_score of 0.0. The web_evidence_score was calculated as 0.419 from 3 contributing articles, with article severities inferred as 0.3 (negative_media) for all articles. The match_confidence was 1.0. The final risk score was computed using the formula: 0.0 * 0.60 + 0.419 * 0.30 + 1.0 * 0.10 = 0.500. The primary driver of the risk score was the match confidence."
+}{
+  "risk_score": 0.6,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": "The analysis of Nirav Modi's information reveals a parsed Open Sanctions count N of 0, resulting in a sanction_score of 0.000. The web_evidence_score is 0.600, derived from 3 articles with an average authenticity score of 0.70 and inferred types of \"negative_media\" (severity 0.3). The match_confidence is 1.000. Using the formula final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk_score is 0.600, classified as HIGH. The primary driver of the risk score is web evidence."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of the entity \"User4657\" resulted in a final risk score of 0.000, classified as LOW. The parsed Open Sanctions count N was 0, leading to a sanction_score of 0.000. There were no relevant web articles found, resulting in a web_evidence_score of 0.000. The match confidence was 0.000 due to the absence of a top match. Using the formula: final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk score is 0.000. The primary driver in this case is the absence of any sanctions, web evidence, or match confidence."
+}{
+  "risk_score": 0.0,
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "For the entity \"User4657\", the parsed Open Sanctions count N is 0, resulting in a sanction_score of 0.000. No relevant web articles were found, leading to a web_evidence_score of 0.000. The match_confidence is 0.000 due to the absence of a top match. Using the formula final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk_score is 0.000, classified as LOW. The single strongest driver in this case is the absence of any sanctions or web evidence."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis for entity \"User4657\" resulted in a final risk score of 0.000, classified as LOW. The parsed Open Sanctions count N was 0, leading to a sanction_score of 0.000. No web articles were found, resulting in a web_evidence_score of 0.000. The match confidence was 0.000 due to the absence of a top match. Using the formula: final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk score is 0.000. The primary driver in this case is the absence of any sanctions, web evidence, or match confidence."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis for entity \"User4657\" yielded a parsed Open Sanctions count N of 0, resulting in a sanction_score of 0.000. No relevant web articles were found, leading to a web_evidence_score of 0.000. The match_confidence was set to 0.000 due to the absence of a top match and a null Score01. Using the formula final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk_score is 0.000, classified as LOW. The primary driver in this case is the absence of any sanctions or web evidence."
+}{
+  "risk_score": 0.0,
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of the entity \"User4657\" resulted in a final risk score of 0.000, classified as LOW. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. No relevant web articles were found, resulting in a web_evidence_score of 0.000. The match confidence is 0.000 due to the absence of a top match. The final risk score was computed using the formula: final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10. The primary driver of the risk score is the absence of any sanctions or web evidence."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of the entity \"User2701\" resulted in a final risk score of 0.000, classified as LOW. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. There are no relevant web articles found, resulting in a web_evidence_score of 0.000. The match confidence is 0.000 as no match was found. Using the formula: final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk score is 0.000. The primary driver in this case is the absence of any sanctions, web evidence, or match confidence."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "For the entity User4619, no top match was found, and the match confidence (Score01) is defaulted to 0. The Open Sanctions ScoreText could not be parsed, resulting in an Open Sanctions count N of 0, which translates to a sanction_score of 0.000. No relevant web articles were found, resulting in a web_evidence_score of 0.000. Using the formula final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk_score is 0.000, classified as LOW. The primary driver of this risk score is the lack of any evidence or matches."
+}{
+  "risk_score": 0.0,
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of the entity \"User8775\" resulted in a final risk score of 0.000, classified as LOW. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. No relevant web articles were found, resulting in a web_evidence_score of 0.000. The match confidence is 0.000 due to the absence of a top match. The final risk score is calculated using the formula: sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10. The primary driver of the risk score is the absence of any sanctions or web evidence."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of User3891 resulted in a parsed Open Sanctions count N of 0, leading to a sanction_score of 0.000. No relevant web articles were found, resulting in a web_evidence_score of 0.000. The match_confidence was 0.000 due to the absence of a top match. Using the formula final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk_score is 0.000, classified as LOW. The single strongest driver in this case is the absence of sanctions."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis for entity \"User2698\" resulted in a final risk score of 0.000, classified as LOW risk. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. The web_evidence_score is 0.000 as no relevant web articles were found. The match_confidence is 0.000 due to the absence of a top match. Using the formula: final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final risk score is 0.000. The primary driver for this risk score is the absence of any sanctions or web evidence. No match was found."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of User9966 resulted in a parsed Open Sanctions count N of 0, leading to a sanction_score of 0.000. No relevant web articles were found, resulting in a web_evidence_score of 0.000. The match_confidence was 0.000 due to the absence of a top match. Using the formula final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk_score is 0.000, classified as LOW. The single strongest driver in this case is sanctions."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of the entity \"User7920\" resulted in a risk score of 0.000, classified as LOW. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. No relevant web articles were found, resulting in a web_evidence_score of 0.000. The match confidence is 0.000 due to the absence of a top match. The final risk score is computed as 0.000 using the formula: sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10. The primary driver of the risk score is the absence of any sanctions, web evidence, or match confidence."
+}{
+  "risk_score": 0.0,
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis for entity \"User926\" resulted in a risk score of 0.000, classified as LOW risk. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. No relevant web articles were found, resulting in a web_evidence_score of 0.000. The match confidence is 0.000 due to the absence of a top match and a null Score01. Using the formula: final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk score is 0.000. The primary driver for this risk score is the absence of any sanctions, web evidence, or match confidence."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of the entity \"User164\" resulted in a final risk score of 0.000, classified as LOW. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. There are no relevant web articles, resulting in a web_evidence_score of 0.000. The match confidence is 0.000 due to the absence of a top match. The final risk score is calculated as 0.000 using the formula: sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10. The primary driver of the risk score is the absence of any sanctions or web evidence."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis for entity \"User669\" resulted in a final risk score of 0.000, classified as LOW. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. The web_evidence_score is 0.000 as no relevant web articles were found. The match_confidence is 0.000 due to the absence of a top match. The final risk score was computed using the formula: sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10. The primary driver for this risk score is the absence of any sanctions or web evidence. No match was found."
+}{
+  "risk_score": 0.0,
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis for entity \"User2696\" resulted in a risk score of 0.000, classified as LOW. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. No web articles were found, resulting in a web_evidence_score of 0.000. The match confidence is 0.000 due to the absence of a top match. Using the formula final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk score is 0.000. The primary driver in this case is the absence of any sanctions or web evidence."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of the entity \"User4691\" resulted in a final risk score of 0.000, classified as LOW. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. No web articles were found, resulting in a web_evidence_score of 0.000. The match confidence is 0.000 as no match was found. Using the formula: final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk score is 0.000. The primary driver for this risk score is the absence of any sanctions, web evidence, or match confidence."
+}{
+  "risk_score": 0.6,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": "The analysis of Nirav Modi reveals a parsed Open Sanctions count N of 0, resulting in a sanction_score of 0.000. The web_evidence_score is 0.655, derived from 3 articles with an average authenticity score of 0.70 and inferred types of \"official_sanction\" (1.0), \"official_sanction\" (1.0), and \"conviction\" (0.95). The match_confidence is 1.0. Using the formula final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk_score is 0.600, classified as HIGH. The primary driver of the risk score is web evidence."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of the entity \"User4691\" resulted in a final risk score of 0.000, classified as LOW. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. No relevant web articles were found, resulting in a web_evidence_score of 0.000. The match confidence is 0.000 due to the absence of a top match. Using the formula: final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final risk score is 0.000. The primary driver of this risk score is the absence of any sanctions or web evidence. No match was found."
+}{
+  "risk_score": 0.0,
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of entity \"User4877\" found no relevant web articles and no match confidence score, resulting in a parsed Open Sanctions count N of 0 and a sanction_score of 0.000. The web_evidence_score is 0.000 due to the absence of any contributing articles. The match_confidence is 0.000 as no match was found. Using the formula final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk_score is 0.000, classified as LOW. The single strongest driver in this case is the absence of any evidence, leading to a minimal risk score."
+}{
+  "risk_score": 0.533,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": "The analysis of Nirav Modi reveals a parsed Open Sanctions count N of 0, resulting in a sanction_score of 0.000. The web_evidence_score is 0.829, derived from 3 articles with authenticity scores of 0.70, 0.70, and 0.60, and inferred article severities of 0.95, 0.95, and 0.95 respectively. The match_confidence is 1.000. Using the formula final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk_score is 0.533, classified as HIGH. The primary driver of the risk score is web evidence."
+}{
+  "risk_score": 0.533,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": "The analysis of Nirav Modi's information yielded a final risk score of 0.533, classified as HIGH. The parsed Open Sanctions count N was 0, resulting in a sanction_score of 0.0. The web_evidence_score was calculated as 0.533 based on 3 contributing articles, with the strongest article having an authenticity of 0.70 and a severity of 0.3 (negative_media). The match_confidence was 1.0. The final risk score was computed using the formula: 0.0 * 0.60 + 0.533 * 0.30 + 1.0 * 0.10. The primary driver of the risk score was web evidence."
+}{
+  "risk_score": 0.51,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": "The analysis of Nirav Modi's information reveals a parsed Open Sanctions count N of 0, resulting in a sanction_score of 0.000. The web_evidence_score is 0.823, derived from 3 contributing articles with authenticity scores of 0.70 each and inferred article severities of 0.95 (conviction). The match_confidence is 1.0, as the Score01 was provided as 1.0. The final risk_score is calculated as 0.000 * 0.60 + 0.823 * 0.30 + 1.0 * 0.10 = 0.510, which is rounded to 3 decimal places and clamped to [0,1]. The risk classification is HIGH. The primary driver of the risk score is the web evidence, which includes credible allegations and convictions related to the Punjab National Bank scam."
+}{
+  "risk_score": 0.52,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": "The analysis of Nirav Modi's information reveals a parsed Open Sanctions count N of 0, resulting in a sanction_score of 0.000. The web_evidence_score is 0.515, derived from 3 articles with authenticity scores of 0.70 each, classified as \"official_sanction\" with a severity of 1.0. The match_confidence is 1.0. The final risk_score is calculated as 0.000 * 0.60 + 0.515 * 0.30 + 1.0 * 0.10 = 0.515, rounded to 0.520, placing it in the HIGH classification. The primary driver of the risk_score is the web evidence."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis for entity \"User2601\" resulted in a final risk score of 0.000, classified as LOW. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. The web_evidence_score is 0.000 as no relevant web articles were found. The match_confidence is 0.000 due to the absence of a match. Using the formula: final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk_score is 0.000. The primary driver for this risk score is the absence of any sanctions, web evidence, or match confidence."
+}{
+  "risk_score": 0.5,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": "The analysis of Nirav Modi reveals a parsed Open Sanctions count N of 0, resulting in a sanction_score of 0.000. The web_evidence_score is 0.435, derived from 3 articles with types inferred as \"official_sanction\" (article_severity = 1.0) and authenticity scores of 0.70 each. The match_confidence is 1.0. The final risk_score is calculated as 0.000 * 0.60 + 0.435 * 0.30 + 1.0 * 0.10 = 0.435, which rounds to 0.500 and falls into the HIGH classification. The primary driver of the risk_score is the web evidence."
+}{
+  "risk_score": 0.567,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": "The analysis of Nirav Modi's information reveals a parsed Open Sanctions count N of 0, resulting in a sanction_score of 0.000. The web_evidence_score is 0.616, derived from 3 contributing articles with an average authenticity score of 0.70 and severity scores of 0.95 (conviction) for all articles. The match_confidence is 1.0. Using the formula final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk_score is 0.567, classified as HIGH. The primary driver of the risk score is web evidence."
+}{
+  "risk_score": 0.6,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": "The analysis of Nirav Modi reveals a final risk score of 0.600, classified as HIGH. The parsed Open Sanctions count N is 0, resulting in a sanction_score of 0.000. The web_evidence_score is 0.469, derived from 3 articles with types inferred as \"conviction\" (article_severity = 0.95) and authenticity scores of 0.70 each. The match_confidence is 1.0. The final risk score is computed as 0.000 * 0.60 + 0.469 * 0.30 + 1.0 * 0.10 = 0.469, rounded to 0.600. The primary driver of the risk score is web evidence."
+}{
+  "risk_score": 0.647,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": "The analysis of Nirav Modi yielded a final risk score of 0.647, classified as HIGH. The parsed Open Sanctions count N was 0, resulting in a sanction_score of 0.000. The web_evidence_score was 0.647, derived from 3 articles with an average authenticity score of 0.70 and inferred types of \"negative_media\" (severity 0.3). The match_confidence was 1.0. The final risk score was computed using the formula: 0.000 * 0.60 + 0.647 * 0.30 + 1.0 * 0.10. The primary driver of the risk score was web evidence."
+}{
+  "risk_score": 0.543,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": "The analysis of Nirav Modi's information yielded a final risk score of 0.543, classified as HIGH. The parsed Open Sanctions count N was 0, resulting in a sanction_score of 0.0. The web_evidence_score was 0.529, derived from 3 articles with authenticity scores of 0.70 each and mapped to a severity of 0.6 (credible_allegation). The match_confidence was 1.0. The final risk score was computed using the formula: 0.0 * 0.60 + 0.529 * 0.30 + 1.0 * 0.10. The primary driver of the risk score was web evidence."
+}{
+  "risk_score": 0.6,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": "The analysis of Nirav Modi's information reveals a parsed Open Sanctions count N of 0, resulting in a sanction_score of 0.000. The web_evidence_score is 0.476, derived from 3 articles with types inferred as \"negative_media\" (severity 0.3) and authenticity scores of 0.7. The match_confidence is 1.0. The final risk_score is calculated as 0.600 using the formula: sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, classifying the risk as HIGH. The primary driver of this risk score is the match confidence."
+}{
+  "risk_score": 0.6,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": "The analysis of Nirav Modi reveals a parsed Open Sanctions count N of 0, resulting in a sanction_score of 0.000. The web_evidence_score is 0.435, derived from 3 articles with authenticity scores of 0.70 each, all classified as \"negative_media\" with a severity of 0.3. The match_confidence is 1.0. Applying the formula (sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10), the final risk_score is 0.600, classified as HIGH. The primary driver of the risk score is the web evidence."
+}{
+  "risk_score": 0.589,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": "The analysis of Nirav Modi reveals a parsed Open Sanctions count N of 0, resulting in a sanction_score of 0.0. The web_evidence_score is 0.575, derived from 3 articles with types inferred as \"official_sanction\" (1.0 severity) and \"negative_media\" (0.3 severity), weighted by authenticity scores ranging from 0.70 to 0.75. The match_confidence is 1.0. Applying the formula (sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10), the final risk_score is 0.589, classified as HIGH. The primary driver of this risk score is the web evidence."
+}{
+  "risk_score": 0.51,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": "The analysis of Nirav Modi yielded a final risk score of 0.510, classified as HIGH. The parsed Open Sanctions count N was 0, resulting in a sanction_score of 0.000. The web_evidence_score was 0.438, derived from 3 articles with authenticity scores of 0.70 each and inferred types of \"negative_media\" (severity 0.3). The match_confidence was 1.0. The final risk score was computed using the formula: 0.000 * 0.60 + 0.438 * 0.30 + 1.0 * 0.10 = 0.510. The primary driver of the risk score was the match confidence."
+}{
+  "risk_score": 0.542,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": "The analysis of Nirav Modi's information yielded a final risk score of 0.542, classified as HIGH. The parsed Open Sanctions count N was 0, resulting in a sanction_score of 0.000. The web_evidence_score was 0.522, derived from 3 articles with types inferred as \"conviction\" (article_severity = 0.95) and authenticity scores ranging from 0.70 to 0.75. The match_confidence was 1.0. The final risk score was calculated using the formula: 0.000 * 0.60 + 0.522 * 0.30 + 1.0 * 0.10. The primary driver of the risk score was web evidence."
+}{
+  "risk_score": 0.525,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": "The analysis of Nirav Modi reveals a parsed Open Sanctions count N of 0, resulting in a sanction_score of 0.000. The web_evidence_score is 0.433, derived from 3 contributing articles with authenticity scores of 0.70 each and inferred types of \"official_sanction\" (1.0 severity). The match_confidence is 1.0. Using the formula final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk_score is 0.525, classified as HIGH. The primary driver of the risk score is the web evidence."
+}{
+  "risk_score": 0.5,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": "The analysis of Nirav Modi reveals a parsed Open Sanctions count N of 0, resulting in a sanction_score of 0.0. The web_evidence_score is 0.418, derived from 3 articles with authenticity scores of 0.70 each and mapped to a severity of 0.3 (negative_media). The match_confidence is 1.0. Applying the formula (sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10), the final rounded risk_score is 0.500, classified as HIGH. The primary driver of the risk score is the web evidence."
+}{
+  "risk_score": 0.517,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": "The analysis of Nirav Modi's information yielded a final risk score of 0.517, classified as HIGH. The parsed Open Sanctions count N was 0, resulting in a sanction_score of 0.000. The web_evidence_score was 0.517, derived from 3 articles with types inferred as \"official_sanction\" and \"negative_media,\" contributing to a combined score of 0.517. The match_confidence was 1.0. The final risk score was computed using the formula: 0.000 * 0.60 + 0.517 * 0.30 + 1.0 * 0.10, rounded to 0.517. The primary driver of the risk score was the web evidence."
+}{
+  "risk_score": 0.481,
+  "risk_classification": "MEDIUM",
+  "match_found": true,
+  "summary": "The analysis of Nirav Modi's information reveals a parsed Open Sanctions count N of 0, resulting in a sanction_score of 0.000. The web_evidence_score is 0.476, derived from 3 articles with an average authenticity score of 0.70 and an inferred article_severity of 0.95 (conviction). The match_confidence is 1.000. Using the formula final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk_score is 0.481, classified as MEDIUM. The primary driver of this risk score is the web evidence."
+}{
+  "risk_score": 0.6,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": "The analysis of Nirav Modi yielded a final risk score of 0.600, classified as HIGH. The parsed Open Sanctions count N was 0, resulting in a sanction_score of 0.000. The web_evidence_score was 0.600, derived from 3 articles with an average authenticity of 0.60 and inferred type \"negative_media\" (severity 0.3). The match_confidence was 1.0. The final risk score was computed using the formula: 0.600 = (0.000 * 0.60) + (0.600 * 0.30) + (1.0 * 0.10). The primary driver of the risk score was web evidence."
+}{
+  "risk_score": 0.567,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": "The analysis of Nirav Modi reveals a final risk score of 0.567, classified as HIGH. The parsed Open Sanctions count N is 0, resulting in a sanction_score of 0.0. The web_evidence_score is 0.529, derived from 3 articles with authenticity scores of 0.7 each and article severities of 0.95 (conviction). The match_confidence is 1.0. The final risk score is computed using the formula: 0.0 * 0.60 + 0.529 * 0.30 + 1.0 * 0.10 = 0.567. The primary driver of the risk score is web evidence."
+}{
+  "risk_score": 0.6,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": "The analysis of Nirav Modi reveals a parsed Open Sanctions count N of 0, resulting in a sanction_score of 0.000. The web_evidence_score is 0.823, derived from 3 articles with authenticity scores of 0.75, 0.70, and 0.70, and inferred article severities of 0.6 (credible_allegation) for all. The match_confidence is 1.0. Using the formula final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk_score is 0.600, classified as HIGH. The primary driver of the risk score is web evidence."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of the entity \"User3234\" resulted in a parsed Open Sanctions count N of 0, leading to a sanction_score of 0.000. No relevant web articles were found, resulting in a web_evidence_score of 0.000. The match_confidence was set to 0.000 due to the absence of a top match. Using the formula final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk_score is 0.000, classified as LOW. The primary driver in this case is the absence of any sanctions, web evidence, or match confidence."
+}{
+  "risk_score": 0.0,
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of User5205 resulted in a risk score of 0.000, classified as LOW. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. No relevant web articles were found, resulting in a web_evidence_score of 0.000. The match confidence is 0.000 due to the absence of a top match. The final risk score is computed as 0.000 using the formula: sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10. The primary driver in this case is the absence of any sanctions, web evidence, or match confidence."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of the entity \"User2849\" resulted in a risk score of 0.000, classified as LOW. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. There are no relevant web articles, resulting in a web_evidence_score of 0.000. The match confidence is 0.000 due to the absence of a top match. Using the formula: final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk score is 0.000. The primary driver in this case is the absence of any sanctions or web evidence. No match was found."
+}{
+  "risk_score": 0.0,
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis for entity \"User7288\" resulted in a final risk score of 0.000, classified as LOW. The parsed Open Sanctions count N was 0, leading to a sanction_score of 0.000. No relevant web articles were found, resulting in a web_evidence_score of 0.000. The match confidence was 0.000 due to the absence of a top match. Using the formula: final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk score is 0.000. The primary driver in this case is the absence of any sanctions, web evidence, or match confidence."
+}{
+  "risk_score": 0.0,
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of User5392 resulted in a parsed Open Sanctions count N of 0, leading to a sanction_score of 0.000. No relevant web articles were found, resulting in a web_evidence_score of 0.000. The match_confidence was 0.000 due to the absence of a top match. Using the formula final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk_score is 0.000, classified as LOW. The primary driver in this case is the absence of any sanctions or web evidence."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of the entity \"User3234\" resulted in a final risk score of 0.000, classified as LOW. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. There are no relevant web articles, resulting in a web_evidence_score of 0.000. The match confidence is 0.000 due to the absence of a top match. Using the formula: final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk score is 0.000. The primary driver in this case is the absence of any sanctions or web evidence."
+}{
+  "risk_score": 0.0,
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of the entity \"User1052\" resulted in a final risk score of 0.000, classified as LOW. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. No relevant web articles were found, resulting in a web_evidence_score of 0.000. The match confidence is 0.000 due to the absence of a top match. The final risk score was computed using the formula: final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10. The primary driver for this risk score is the absence of any sanctions or web evidence."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of the entity \"User437\" resulted in a final risk score of 0.000, classified as LOW. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. No relevant web articles were found, resulting in a web_evidence_score of 0.000. The match confidence is 0.000 due to the absence of a top match. Using the formula: final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final risk score is 0.000. The primary driver for this risk score is the absence of any sanctions or web evidence."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of the entity \"User3108\" resulted in a final risk score of 0.000, classified as LOW risk. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. There are no relevant web articles found, resulting in a web_evidence_score of 0.000. The match confidence is 0.000 due to the absence of a top match. The final risk score is computed as 0.000 using the formula: sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10. The primary driver for this risk score is the absence of any sanctions or web evidence."
+}{
+  "risk_score": 0.0,
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis for entity \"User4457\" resulted in a final risk score of 0.000, classified as LOW. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. No web articles were found, resulting in a web_evidence_score of 0.000. The match confidence is 0.000 due to the absence of a top match. The final risk score is calculated using the formula: final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10. The primary driver for this risk score is the absence of any sanctions or web evidence."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of the entity \"User3234\" resulted in a final risk score of 0.000, classified as LOW. The parsed Open Sanctions count N was 0, leading to a sanction_score of 0.000. No relevant web articles were found, resulting in a web_evidence_score of 0.000. The match confidence was 0.000 due to the absence of a top match. Using the formula: final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final risk score was 0.000. The primary driver in this case was the absence of any sanctions or web evidence."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of the entity \"User3234\" resulted in a parsed Open Sanctions count N of 0, leading to a sanction_score of 0.000. No relevant web articles were found, resulting in a web_evidence_score of 0.000. The match confidence was 0.000 due to the absence of a top match. Using the formula: final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk_score is 0.000, classified as LOW. The single strongest driver in this case is \"sanctions\"."
+}{
+  "risk_score": 0.0,
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of the entity \"User3234\" resulted in a risk score of 0.000, classified as LOW. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. No relevant web articles were found, resulting in a web_evidence_score of 0.000. The match confidence is 0.000 due to the absence of a top match. Using the formula: final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk score is 0.000. The primary driver in this case is the absence of any sanctions, web evidence, or match confidence."
+}{
+  "risk_score": 0.0,
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of the entity \"User1470\" resulted in a final risk score of 0.000, classified as LOW. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. The web_evidence_score is 0.000 as no relevant web articles were found. The match_confidence is 0.000 due to the absence of a top match. The final risk score was computed using the formula: final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10. The primary driver of the risk score is the absence of any sanctions or web evidence. No match was found."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of the entity \"User811\" resulted in a final risk score of 0.000, classified as LOW. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. There are no relevant web articles, resulting in a web_evidence_score of 0.000. The match confidence is 0.000 due to the absence of a top match. Using the formula: final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final risk score is 0.000. No match was found, and the primary driver is the absence of any sanctions or web evidence."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The parsed Open Sanctions count N is 0, resulting in a sanction_score of 0.000. The web_evidence_score is 0.000 as no relevant web articles were found. The match_confidence is 0.000 due to the absence of a match. Using the formula: final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk_score is 0.000, classified as LOW. The single strongest driver is sanctions."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The parsed Open Sanctions count N is 0, resulting in a sanction_score of 0.000. The web_evidence_score is 0.000 as no relevant web articles were found. The match_confidence is 0.000 due to the absence of a top match. Using the formula: final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk_score is 0.000, classified as LOW. The single strongest driver is sanctions."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of the entity \"User9342\" resulted in a final risk score of 0.000, classified as LOW. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. No relevant web articles were found, resulting in a web_evidence_score of 0.000. The match confidence is 0.000 due to the absence of a top match. The final risk score is calculated using the formula: sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10. The primary driver of the risk score is the absence of sanctions, web evidence, and match confidence."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of the entity \"User3234\" resulted in a final risk score of 0.000, classified as LOW. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. No relevant web articles were found, resulting in a web_evidence_score of 0.000. The match confidence is 0.000 due to the absence of a top match. Using the formula: final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk score is 0.000. The primary driver for this score is the absence of any sanctions or web evidence."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of the entity \"User3234\" resulted in a final risk score of 0.000, classified as LOW. The parsed Open Sanctions count N was 0, leading to a sanction_score of 0.000. No relevant web articles were found, resulting in a web_evidence_score of 0.000. The match confidence was 0.000 due to the absence of a top match. The final risk score was computed using the formula: final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10. The primary driver of the risk score was the absence of any sanctions or web evidence."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of the entity \"User3234\" resulted in a final risk score of 0.000, classified as LOW. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. No relevant web articles were found, resulting in a web_evidence_score of 0.000. The match confidence is 0.000 due to the absence of a top match. Using the formula: final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final risk score is 0.000. The primary driver for this score is the absence of any sanctions or web evidence. No match was found."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of the entity \"User3234\" resulted in a parsed Open Sanctions count N of 0, leading to a sanction_score of 0.000. No relevant web articles were found, resulting in a web_evidence_score of 0.000. The match_confidence was set to 0.000 due to the absence of a top match. Using the formula: final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk_score is 0.000, classified as LOW. The primary driver in this case is the absence of any sanctions or web evidence."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The parsed Open Sanctions count N is 0, resulting in a sanction_score of 0.000. The web_evidence_score is 0.000 as no relevant web articles were found. The match_confidence is 0.000 due to the absence of a match. Using the formula final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk_score is 0.000, classified as LOW. The single strongest driver is sanctions."
+}{
+  "risk_score": 0.6,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": "The analysis of Nirav Modi reveals a parsed Open Sanctions count N of 0, resulting in a sanction_score of 0.0. The web_evidence_score is 0.600, derived from 3 contributing articles with authenticity scores ranging from 0.60 to 0.70 and types inferred as \"negative_media\" (severity 0.3) and \"conviction\" (severity 0.95). The match_confidence is 1.0. Using the formula final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk_score is 0.600, classified as HIGH. The primary driver of the risk score is web evidence."
+}{
+  "risk_score": 0.0,
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis for the entity \"SUMAN KUMAR RAY\" resulted in a final risk score of 0.000, classified as LOW risk. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. The web_evidence_score is 0.000, as there are no relevant articles contributing to the risk assessment. The match_confidence is 0.000 due to the absence of a top match and a null Score01. The final risk score is computed using the formula: sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, resulting in 0.000. The primary driver of the risk score is the absence of sanctions and relevant web evidence. No match was found."
+}{
+  "risk_score": 0.3,
+  "risk_classification": "MEDIUM",
+  "match_found": true,
+  "summary": "The analysis of the entity \"JOHN DOE\" yielded a final risk score of 0.300, classified as MEDIUM. The parsed Open Sanctions count N was 0, resulting in a sanction_score of 0.000. The web_evidence_score was calculated as 0.300, derived from 3 contributing articles with varying authenticity and severity. The match_confidence was 0.000 due to the absence of a match score. The final risk score was computed using the formula: sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10. The primary driver of the risk score was the web evidence, specifically the article from the U.S. Department of Justice, which contributed significantly to the overall risk assessment."
+}{
+  "risk_score": 0.18,
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of the entity \"SUMAN KUMAR RAY\" yielded a final risk score of 0.180, classified as LOW. The parsed Open Sanctions count N was 0, resulting in a sanction_score of 0.000. The web_evidence_score was calculated as 0.180 based on 2 articles, with the strongest article contributing a score of 0.180 (authenticity 0.60, type inferred as \"other\" with severity 0.3). The match_confidence was 0.000 due to the absence of a match. The final risk score was computed using the formula: 0.000 * 0.60 + 0.180 * 0.30 + 0.000 * 0.10. The primary driver of the risk score was web evidence. No match was found, and the overall risk is considered low."
+}{
+  "risk_score": 0.5,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": "The analysis of the entity \"JOHN DOE\" yielded a final risk score of 0.500, classified as HIGH. The parsed Open Sanctions count N is 0, resulting in a sanction_score of 0.000. The web_evidence_score is 0.500, derived from 3 contributing articles, with the strongest evidence being a conviction (article_severity = 0.95) and authenticity scores of 0.90 and 0.50. The match_confidence is 0.818. The final risk score is computed as 0.000 * 0.60 + 0.500 * 0.30 + 0.818 * 0.10 = 0.500. The primary driver of the risk score is the web evidence, particularly the conviction record."
+}{
+  "risk_score": 0.555,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": "The analysis of the entity \"JOHN DOE\" yielded a final risk score of 0.555, classified as HIGH. The parsed Open Sanctions count N is 0, resulting in a sanction_score of 0.000. The web_evidence_score is 0.826, derived from 3 articles, all of which are official convictions with an authenticity score of 0.90 each. The match_confidence is 0.818. The final risk score was computed using the formula: final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10. The primary driver of the risk score is the web evidence, which significantly contributed to the overall risk assessment."
+}{
+  "risk_score": 0.555,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": "The analysis of the entity \"JOHN DOE\" reveals a parsed Open Sanctions count N of 0, resulting in a sanction_score of 0.000. The web_evidence_score is 0.231, derived from 3 articles, all of which are categorized as \"conviction\" with an authenticity score of 0.90 each. The match_confidence is 0.818. The final risk_score is calculated as 0.000 * 0.60 + 0.231 * 0.30 + 0.818 * 0.10 = 0.555, which is rounded to 3 decimal places and clamped to [0,1]. The risk_classification is \"HIGH\". The primary driver of the risk_score is the match confidence."
+}{
+  "risk_score": 0.555,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": null
+}{
+  "risk_score": 0.555,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": "The analysis of the entity \"john doe\" reveals a parsed Open Sanctions count N of 0, resulting in a sanction_score of 0.000. The web_evidence_score is 0.823, derived from 3 articles with types inferred as \"conviction\" (article_severity 0.95) and authenticity scores of 0.95, 0.95, and 0.90. The match_confidence is 0.818. The final risk_score is calculated as 0.000 * 0.60 + 0.823 * 0.30 + 0.818 * 0.10 = 0.555, rounded to 3 decimal places and clamped to [0,1], resulting in a HIGH risk classification. The primary driver of the risk score is the web evidence."
+}{
+  "risk_score": 0.567,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": "The analysis of the entity \"john doe\" reveals a parsed Open Sanctions count N of 0, resulting in a sanction_score of 0.000. The web_evidence_score is 0.651, derived from 3 articles, all of which are official sanctions with an authenticity score of 0.90 and an article severity of 1.0. The match_confidence is 0.818. Using the formula final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk_score is 0.567, classified as HIGH. The primary driver of the risk score is web evidence."
+}{
+  "risk_score": 0.555,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": "The analysis of the entity \"john doe\" yielded a final risk score of 0.555, classified as HIGH. The parsed Open Sanctions count N is 0, resulting in a sanction_score of 0.000. The web_evidence_score is 0.779, derived from 3 articles, all of which are official sanctions with high authenticity scores (0.95, 0.90, 0.90). The match_confidence is 0.818. The final risk score was computed using the formula: 0.000 * 0.60 + 0.779 * 0.30 + 0.818 * 0.10. The primary driver of the risk score is the web evidence, which significantly contributed to the overall assessment."
+}{
+  "risk_score": 0.546,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": "The analysis of the entity \"john doe\" yielded a final risk score of 0.546, classified as HIGH. The parsed Open Sanctions count N was 0, resulting in a sanction_score of 0.000. The web_evidence_score was 0.542, derived from 3 articles, all of which were categorized as \"conviction\" with authenticity scores of 0.95, 0.95, and 0.90, respectively. The match_confidence was 0.818. The final risk score was computed using the formula: 0.000 * 0.60 + 0.542 * 0.30 + 0.818 * 0.10. The primary driver of the risk score was the web evidence, specifically the multiple high-authenticity articles reporting a conviction."
+}{
+  "risk_score": 0.276,
+  "risk_classification": "MEDIUM",
+  "match_found": true,
+  "summary": "The analysis of the entity \"john doe\" reveals a parsed Open Sanctions count N of 0, resulting in a sanction_score of 0.000. The web_evidence_score is 0.252, derived from 3 articles, all of which are official sanctions with an authenticity score of 0.95 and 0.90 respectively. The match_confidence is 0.000 due to the absence of a top match. The final risk_score is calculated using the formula: 0.000 * 0.60 + 0.252 * 0.30 + 0.000 * 0.10, resulting in 0.276, which is rounded to 3 decimal places and clamped to [0,1]. The risk_classification is MEDIUM. The single strongest driver of the risk_score is web evidence."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of User3234 resulted in a final risk score of 0.000, classified as LOW. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. There are no relevant web articles, resulting in a web_evidence_score of 0.000. The match confidence is 0.000 due to the absence of a top match. The final risk score is calculated using the formula: sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10. The primary driver for this risk score is the absence of any sanctions or web evidence."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "For the entity User3234, the Open Sanctions count N is 0, resulting in a sanction_score of 0.000. There are no relevant web articles, so the web_evidence_score is 0.000. The match_confidence is 0.000 due to the absence of a top match. Using the formula final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk_score is 0.000, classified as LOW. The single strongest driver is sanctions."
+}{
+  "risk_score": 0.283,
+  "risk_classification": "MEDIUM",
+  "match_found": true,
+  "summary": "The analysis of the entity \"john doe\" reveals a parsed Open Sanctions count N of 0, resulting in a sanction_score of 0.000. The web_evidence_score is 0.651, derived from 3 articles, all of which are official sanctions with an authenticity score of 0.90 each. The match_confidence is 0.000 as no match was found. Using the formula final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk_score is 0.283, classifying the risk as MEDIUM. The primary driver of this risk score is the web evidence."
+}{
+  "risk_score": 0.555,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": null
+}{
+  "risk_score": 0.558,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": "The analysis of the entity \"john doe\" reveals a final risk score of 0.558, classified as HIGH. The parsed Open Sanctions count N is 0, resulting in a sanction_score of 0.000. The web_evidence_score is 0.852, derived from 3 articles, all of which are highly authentic (0.95, 0.95, 0.90) and classified as \"conviction\" with a severity of 0.95. The match_confidence is 0.000 as no match was found. The final risk score is calculated using the formula: final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10. The primary driver of the risk score is the web evidence, specifically the multiple highly authentic articles reporting a conviction. The entity's nationality (Indian) and occupation (business) do not significantly impact the risk assessment in this context."
+}{
+  "risk_score": 0.555,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": null
+}{
+  "risk_score": 0.0,
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of the entity \"suman kumar ray\" resulted in a risk score of 0.000, classified as LOW risk, with no match found. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. The web_evidence_score is 0.000, as there are no relevant articles contributing to the assessment. The match_confidence is 0.000 due to the absence of a top match and a null Score01. The final risk score is calculated using the formula: final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, resulting in 0.000. The primary driver in this assessment is the absence of any sanctions, web evidence, or match confidence. The entity's context, including an occupation in business and an annual income of 2 lakh - 3 lakh, does not indicate any additional risk factors."
+}{
+  "risk_score": 0.0,
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of the entity \"suman kumar ray\" resulted in a final risk score of 0.000, classified as LOW risk, with no match found. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. The web_evidence_score is 0.000, as there are no relevant articles contributing to the assessment. The match_confidence is 0.000 due to the absence of a top match and a null Score01. The final risk score is calculated using the formula: sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, resulting in 0.000. The primary driver for this assessment is the lack of sanctions, web evidence, and match confidence. The entity's context, including an occupation in business and an annual income of 2 lakh - 3 lakh, does not indicate any additional risk factors."
+}{
+  "risk_score": 0.0,
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of the entity \"suman kumar ray\" resulted in a final risk score of 0.000, classified as LOW risk. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. The web_evidence_score is 0.000, as none of the three articles provided in the WebNotes section are relevant to the risk assessment (all articles are academic in nature and do not pertain to sanctions, convictions, or other risk-related categories). The match_confidence is 0.000 due to the absence of a TopMatch and a null Score01. The final risk score is calculated using the formula: final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, resulting in 0.000. The primary driver of this assessment is the lack of relevant sanctions, web evidence, or match confidence. The entity's context, including an occupation in business and an annual income of 2 lakh - 3 lakh, does not indicate any additional risk factors. Therefore, no match was found, and the risk classification is LOW."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis for the entity \"dhruv pokhriyal\" resulted in a risk score of 0.000, classified as LOW risk. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. The web_evidence_score is 0.000 as no relevant web articles were found. The match_confidence is 0.000 due to the absence of a top match and a null Score01. Using the formula final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk score is 0.000. The primary driver for this assessment is the absence of any sanctions, web evidence, or match confidence. No relevant entity context was available to support or contradict this assessment."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of the entity \"dhruv pokhriyal\" resulted in a risk score of 0.000, classified as LOW. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. No relevant web articles were found, resulting in a web_evidence_score of 0.000. The match confidence is 0.000 as no top match was found. Using the formula final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk score is 0.000. The primary driver of this assessment is the absence of any sanctions, web evidence, or match confidence. No relevant entity context was available to support the assessment."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of the entity \"dhruv pokhriyal\" resulted in a final risk score of 0.000, classified as LOW. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. The web_evidence_score is 0.000 as no relevant web articles were found. The match_confidence is 0.000 due to the absence of a top match and a null Score01. The final risk score was computed using the formula: final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10. The primary driver for this assessment is the lack of any significant evidence or matches. No relevant entity context was available to support or contradict the assessment."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis for the entity \"dhruv pokhriyal\" resulted in a risk score of 0.000, classified as LOW risk. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. The web_evidence_score is 0.000 as no relevant web articles were found. The match_confidence is 0.000 due to the absence of a top match and a null Score01. Using the formula: final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk_score is 0.000. The primary driver for this assessment is the lack of sanctions, web evidence, and match confidence. No relevant entity context was available to support the assessment."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The risk assessment for the entity \"dhruv pokhriyal\" resulted in a risk score of 0.000, classified as LOW. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. The web_evidence_score is 0.000 as no relevant web articles were found. The match_confidence is 0.000 due to the absence of a top match and a null Score01. Using the formula: final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk_score is 0.000. The primary driver of this assessment is the lack of any sanctions, web evidence, or match confidence. No relevant entity context was available to support the assessment."
+}{
+  "risk_score": 0.0,
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The parsed Open Sanctions count N is 0, resulting in a sanction_score of 0.000. The web_evidence_score is 0.000 as no relevant web articles were found. The match_confidence is 0.000 due to the absence of a match. Using the formula final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk_score is 0.000, classified as LOW. The single strongest driver is sanctions. No relevant entity context supports the assessment."
+}{
+  "risk_score": 0.0,
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of the entity \"dhruv pokhriyal\" resulted in a final risk score of 0.000, classified as LOW risk. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. No relevant web articles were found, resulting in a web_evidence_score of 0.000. The match confidence is 0.000 due to the absence of a top match and a null Score01. The final risk score was computed using the formula: final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10. The primary driver of the risk score is the absence of any sanctions, web evidence, or match confidence. No relevant entity context was available to support the assessment."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of the entity \"dhruv pokhriyal\" resulted in a risk score of 0.000, classified as LOW. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. No relevant web articles were found, resulting in a web_evidence_score of 0.000. The match confidence is 0.000 due to the absence of a top match and a null Score01. The final risk score is calculated using the formula: final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, resulting in 0.000. The primary driver of this assessment is the absence of any sanctions, web evidence, or match confidence. No relevant entity context was provided to support the assessment."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis for the entity \"dhruv pokhriyal\" resulted in a risk score of 0.000, classified as LOW risk. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. The web_evidence_score is 0.000 as no relevant web articles were found. The match_confidence is 0.000 due to the absence of a top match and a null Score01. Using the formula final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk_score is 0.000. The primary driver in this case is the absence of any sanctions, web evidence, or match confidence. No relevant entity context was available to support the assessment."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis for the entity \"dhruv pokhriyal\" resulted in a final risk score of 0.000, classified as LOW risk. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. The web_evidence_score is 0.000 as no relevant web articles were found. The match_confidence is 0.000 due to the absence of a top match and a null Score01. Using the formula: final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk_score is 0.000. The primary driver for this assessment is the lack of sanctions, web evidence, and match confidence. No relevant entity context was provided to support the assessment."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The analysis of the entity \"dhruv pokhriyal\" resulted in a final risk score of 0.000, classified as LOW. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. The web_evidence_score is 0.000 as no relevant web articles were found. The match_confidence is 0.000 due to the absence of a top match and a null Score01. The final risk score was computed using the formula: final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10. The single strongest driver in this assessment is the absence of any sanctions or web evidence. No relevant entity context was available to support the assessment."
+}{
+  "risk_score": "0.000",
+  "risk_classification": "LOW",
+  "match_found": false,
+  "summary": "The risk assessment for the entity \"dhruv pokhriyal\" resulted in a final risk score of 0.000, classified as LOW. The parsed Open Sanctions count N is 0, leading to a sanction_score of 0.000. The web_evidence_score is 0.000 as no relevant web articles were found. The match_confidence is 0.000 due to the absence of a top match and a null Score01. Using the formula final_risk_score = sanction_score * 0.60 + web_evidence_score * 0.30 + match_confidence * 0.10, the final rounded risk_score is 0.000. The primary driver in this assessment is the absence of any sanctions, web evidence, or match confidence. No relevant entity context was available to support the assessment."
+}{
+  "risk_score": 0.465,
+  "risk_classification": "MEDIUM",
+  "match_found": true,
+  "summary": null
+}{
+  "risk_score": 0.467,
+  "risk_classification": "MEDIUM",
+  "match_found": true,
+  "summary": null
+}{
+  "risk_score": 0.432,
+  "risk_classification": "MEDIUM",
+  "match_found": true,
+  "summary": null
+}{
+  "risk_score": 0.483,
+  "risk_classification": "MEDIUM",
+  "match_found": true,
+  "summary": "The analysis of Nirav Modi reveals a medium risk classification with a final risk score of 0.483. The parsed Open Sanctions count N is 0, resulting in a sanction_score of 0.000. The web_evidence_score is 0.433, derived from 3 articles with types inferred as \"negative_media\" (severity 0.3) and authenticity scores of 0.70 each. The match_confidence is 0.000 due to missing data. The final risk score is calculated using the formula: 0.000 * 0.60 + 0.433 * 0.30 + 0.000 * 0.10 = 0.483. The primary driver of the risk score is the web evidence, supported by the entity's occupation in business and nationality in India, which is relevant given the context of the Punjab National Bank scam."
+}{
+  "risk_score": 0.462,
+  "risk_classification": "MEDIUM",
+  "match_found": true,
+  "summary": null
+}{
+  "risk_score": 0.42,
+  "risk_classification": "MEDIUM",
+  "match_found": true,
+  "summary": null
+}{
+  "risk_score": 0.483,
+  "risk_classification": "MEDIUM",
+  "match_found": true,
+  "summary": null
+}{
+  "risk_score": 0.517,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": null
+}{
+  "risk_score": 0.462,
+  "risk_classification": "MEDIUM",
+  "match_found": true,
+  "summary": null
+}{
+  "risk_score": 0.5,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": "The risk assessment for Nirav Modi yields a final risk score of 0.500, classified as HIGH. The parsed Open Sanctions count N is 0, resulting in a sanction_score of 0.000. The web_evidence_score is 0.433, derived from 3 articles with authenticity scores of 0.70 each and severity scores of 0.3 (negative_media). The match_confidence is 0.000 due to the absence of a TopMatch and Score01. The final risk score is calculated using the formula: 0.000 * 0.60 + 0.433 * 0.30 + 0.000 * 0.10 = 0.500. The primary driver of the risk score is the web evidence. Relevant entity context includes the occupation of business and nationality of Indian, which may support the assessment given the known PNB bank scam associated with Nirav Modi."
+}{
+  "risk_score": 0.594,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": null
+}{
+  "risk_score": 0.597,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": null
+}{
+  "risk_score": 0.294,
+  "risk_classification": "MEDIUM",
+  "match_found": true,
+  "summary": null
+}{
+  "risk_score": 0.6,
+  "risk_classification": "HIGH",
+  "match_found": true,
+  "summary": "The analysis of Nirav Modi reveals a final risk score of 0.600, classified as HIGH. The parsed Open Sanctions count N is 0, resulting in a sanction_score of 0.000. The web_evidence_score is 0.430, derived from 3 articles with authenticity scores of 0.70, 0.70, and 0.60, and severity scores of 0.3, 0.3, and 0.3 respectively. The match_confidence is 1.0, as the Score01 was provided as 1.0. The final risk score is calculated using the formula: 0.000 * 0.60 + 0.430 * 0.30 + 1.0 * 0.10 = 0.600. The primary driver of the risk score is the match confidence. Relevant entity context includes the occupation of business and Indian nationality, which may support the assessment."
+}

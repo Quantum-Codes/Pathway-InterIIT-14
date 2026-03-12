@@ -1,0 +1,77 @@
+from pydantic import BaseModel
+from typing import Optional, List
+from datetime import datetime
+from decimal import Decimal
+
+
+class TransactionBase(BaseModel):
+    transaction_id: str
+    transaction_type: str
+    amount: Decimal
+    currency: Optional[str] = 'INR'
+    transaction_date: datetime
+
+
+class TransactionCreate(TransactionBase):
+    user_id: int
+    sender_account: Optional[str] = None
+    receiver_account: Optional[str] = None
+    sender_name: Optional[str] = None
+    receiver_name: Optional[str] = None
+    suspicious_score: Optional[float] = 0.0
+    risk_level: Optional[str] = 'low'
+    is_flagged: Optional[bool] = False
+    flag_reason: Optional[str] = None
+    status: Optional[str] = 'pending'
+    payment_method: Optional[str] = None
+    ip_address: Optional[str] = None
+    device_id: Optional[str] = None
+    location: Optional[str] = None
+
+
+class TransactionUpdate(BaseModel):
+    transaction_type: Optional[str] = None
+    amount: Optional[Decimal] = None
+    currency: Optional[str] = None
+    sender_account: Optional[str] = None
+    receiver_account: Optional[str] = None
+    sender_name: Optional[str] = None
+    receiver_name: Optional[str] = None
+    suspicious_score: Optional[float] = None
+    risk_level: Optional[str] = None
+    is_flagged: Optional[bool] = None
+    flag_reason: Optional[str] = None
+    status: Optional[str] = None
+    payment_method: Optional[str] = None
+    ip_address: Optional[str] = None
+    device_id: Optional[str] = None
+    location: Optional[str] = None
+    transaction_date: Optional[datetime] = None
+
+
+class TransactionRead(TransactionBase):
+    id: int
+    user_id: int
+    sender_account: Optional[str] = None
+    receiver_account: Optional[str] = None
+    sender_name: Optional[str] = None
+    receiver_name: Optional[str] = None
+    suspicious_score: float
+    risk_level: str
+    is_flagged: bool
+    flag_reason: Optional[str] = None
+    status: str
+    payment_method: Optional[str] = None
+    ip_address: Optional[str] = None
+    device_id: Optional[str] = None
+    location: Optional[str] = None
+    created_at: datetime
+    updated_at: datetime
+
+    class Config:
+        from_attributes = True
+
+
+class TransactionListResponse(BaseModel):
+    total: int
+    items: List[TransactionRead]

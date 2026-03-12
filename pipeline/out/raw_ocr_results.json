@@ -1,0 +1,23 @@
+{
+    "fields": {
+        "address": "123 ABCD STREET\nXYZ\nAUSTRALIA QWERTYUIOP ABCDEFGHIJ 123456 02 /3",
+        "applicant_first_name": "JOHN",
+        "applicant_last_name": "DOE",
+        "applicant_middle_name": "",
+        "applicant_name_prefix": "MY.",
+        "date_of_birth": "01-01-1991",
+        "father_first_name": "MARK",
+        "father_last_name": "DDE",
+        "father_middle_name": "",
+        "father_name_prefix": "Mr",
+        "gender": "M-Male",
+        "mother_first_name": "REENA",
+        "mother_last_name": "DOE",
+        "mother_middle_name": "",
+        "mother_name_prefix": "MYS",
+        "residential_status": "☑ Resident Individual"
+    },
+    "pics": [],
+    "diff": 1,
+    "time": 0
+}

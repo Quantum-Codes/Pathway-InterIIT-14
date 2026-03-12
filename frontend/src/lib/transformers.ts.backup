@@ -1,0 +1,268 @@
+// Data transformation utilities to convert API responses to component formats
+import { User as ApiUser, Transaction as ApiTransaction } from './api';
+
+export interface UserEvent {
+  id: number;
+  type: string;
+  by?: string;
+  description?: string;
+  timestamp: string;
+  color: "blue" | "red" | "green" | "gray" | "yellow";
+  iconType: "edit" | "alert" | "transaction" | "document";
+  isAlert?: boolean;
+  ruleId?: string;
+  at?: string;
+  document?: string;
+}
+
+export interface ComponentUser {
+  id: number;
+  name: string;
+  email: string;
+  createdAt: string;
+  toxicityScore: number;
+  status: "Verified" | "Unverified" | "Blacklisted";
+  statusColor: string;
+  accountStatus: "Active" | "Suspended";
+  image?: string;
+  riskScore: number;
+  riskLevel: string;
+  kycStatus: "Verified" | "Pending" | "Rejected";
+  lastLogin: string;
+  accountAge: string;
+  events: UserEvent[];
+}
+
+export interface ComponentTransaction {
+  id: number;
+  type: "Sent" | "Received" | "Converted";
+  icon: string;
+  iconColor: string;
+  amount: string;
+  sender: string;
+  receiver: string;
+  status: string;
+  statusColor: string;
+  paymentMethod: string;
+  amountSmall?: string;
+}
+
+// Convert API user to component user format
+export function transformApiUserToComponent(apiUser: ApiUser, userEvents: UserEvent[] = []): ComponentUser {
+  // Map KYC status
+  const getStatus = (): "Verified" | "Unverified" | "Blacklisted" => {
+    if (apiUser.blacklisted) return "Blacklisted";
+    if (apiUser.kyc_status === "VERIFIED") return "Verified";
+    return "Unverified";
+  };
+
+  const status = getStatus();
+  
+  // Map status colors
+  const getStatusColor = (status: string): string => {
+    switch (status) {
+      case "Verified":
+        return "bg-green-100 text-green-700";
+      case "Blacklisted":
+        return "bg-red-100 text-red-700";
+      default:
+        return "bg-yellow-100 text-yellow-700";
+    }
+  };
+
+  // Map risk level
+  const getRiskLevel = (riskCategory: string): string => {
+    switch (riskCategory) {
+      case "LOW":
+        return "Low";
+      case "MEDIUM":
+        return "Medium";
+      case "HIGH":
+        return "High";
+      case "CRITICAL":
+        return "Critical";
+      default:
+        return "Unknown";
+    }
+  };
+
+  // Calculate account age
+  const calculateAccountAge = (createdAt: string): string => {
+    const created = new Date(createdAt);
+    const now = new Date();
+    const diffTime = Math.abs(now.getTime() - created.getTime());
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    
+    if (diffDays < 30) {
+      return `${diffDays} Days`;
+    } else if (diffDays < 365) {
+      const months = Math.floor(diffDays / 30);
+      return `${months} Month${months > 1 ? 's' : ''}`;
+    } else {
+      const years = Math.floor(diffDays / 365);
+      const months = Math.floor((diffDays % 365) / 30);
+      return `${years} Year${years > 1 ? 's' : ''}${months > 0 ? `, ${months} Month${months > 1 ? 's' : ''}` : ''}`;
+    }
+  };
+
+  // Format last login (placeholder since API doesn't provide this)
+  const formatLastLogin = (updatedAt: string): string => {
+    const date = new Date(updatedAt);
+    return date.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+    }) + ' ' + date.toLocaleTimeString('en-US', {
+      hour: 'numeric',
+      minute: '2-digit',
+      hour12: true,
+    });
+  };
+
+  return {
+    id: apiUser.user_id,
+    name: apiUser.username,
+    email: apiUser.email,
+    createdAt: new Date(apiUser.created_at).toISOString().split('T')[0],
+    toxicityScore: Math.round(apiUser.current_toxicity_360),
+    status,
+    statusColor: getStatusColor(status),
+    accountStatus: apiUser.blacklisted ? "Suspended" : "Active",
+    image: "/default-avatar.jpg",
+    riskScore: Math.round(apiUser.current_toxicity_360),
+    riskLevel: getRiskLevel(apiUser.risk_category),
+    kycStatus: apiUser.kyc_status === "VERIFIED" ? "Verified" : apiUser.kyc_status === "PENDING" ? "Pending" : "Rejected",
+    lastLogin: formatLastLogin(apiUser.updated_at),
+    accountAge: calculateAccountAge(apiUser.created_at),
+    events: userEvents,
+  };
+}
+
+// Convert API transaction to component transaction format
+export function transformApiTransactionToComponent(apiTransaction: ApiTransaction, users: Map<number, ApiUser> = new Map()): ComponentTransaction {
+  // Get user names
+  const fromUser = users.get(apiTransaction.from_user_id);
+  const toUser = users.get(apiTransaction.to_user_id);
+  
+  const sender = fromUser?.username || `User ${apiTransaction.from_user_id}`;
+  const receiver = toUser?.username || `User ${apiTransaction.to_user_id}`;
+
+  // Determine transaction type icon and color
+  const getTypeAndIcon = (txType: string): { type: "Sent" | "Received" | "Converted"; icon: string; iconColor: string } => {
+    switch (txType) {
+      case "TRANSFER":
+        return {
+          type: "Sent",
+          icon: "↗️",
+          iconColor: "bg-pink-100 text-pink-500"
+        };
+      case "DEPOSIT":
+        return {
+          type: "Received",
+          icon: "↙️",
+          iconColor: "bg-green-100 text-green-500"
+        };
+      case "WITHDRAWAL":
+        return {
+          type: "Sent",
+          icon: "↗️",
+          iconColor: "bg-red-100 text-red-500"
+        };
+      default:
+        return {
+          type: "Converted",
+          icon: "🔄",
+          iconColor: "bg-blue-100 text-blue-500"
+        };
+    }
+  };
+
+  const typeInfo = getTypeAndIcon(apiTransaction.transaction_type);
+
+  // Map status colors
+  const getStatusColor = (status: string): string => {
+    switch (status) {
+      case "COMPLETED":
+        return "bg-green-100 text-green-700";
+      case "PENDING":
+        return "bg-yellow-100 text-yellow-700";
+      case "FAILED":
+        return "bg-red-100 text-red-700";
+      case "FLAGGED":
+        return "bg-red-100 text-red-700";
+      case "REVERSED":
+        return "bg-gray-100 text-gray-700";
+      default:
+        return "bg-gray-100 text-gray-700";
+    }
+  };
+
+  const getStatusLabel = (status: string): string => {
+    switch (status) {
+      case "COMPLETED":
+        return "Success";
+      case "PENDING":
+        return "Pending";
+      case "FAILED":
+        return "Failed";
+      case "FLAGGED":
+        return "Flagged";
+      case "REVERSED":
+        return "Reversed";
+      default:
+        return status;
+    }
+  };
+
+  return {
+    id: apiTransaction.transaction_id,
+    type: typeInfo.type,
+    icon: typeInfo.icon,
+    iconColor: typeInfo.iconColor,
+    amount: `${apiTransaction.currency} ${apiTransaction.amount.toLocaleString()}`,
+    sender,
+    receiver,
+    status: getStatusLabel(apiTransaction.status),
+    statusColor: getStatusColor(apiTransaction.status),
+    paymentMethod: apiTransaction.payment_method,
+  };
+}
+
+// Transform toxicity history to user events
+export function transformToxicityHistoryToEvents(history: { toxicity_360?: number; calculation_trigger?: string; recorded_at: string; }[]): UserEvent[] {
+  return history.map((item, index) => ({
+    id: index + 1,
+    type: "Toxicity Update",
+    by: "System",
+    description: `Toxicity score updated to ${item.toxicity_360?.toFixed(1) || 'N/A'} (${item.calculation_trigger || 'Unknown trigger'})`,
+    timestamp: item.recorded_at,
+    color: (item.toxicity_360 || 0) > 50 ? "red" : (item.toxicity_360 || 0) > 20 ? "yellow" : "green",
+    iconType: "alert",
+    isAlert: (item.toxicity_360 || 0) > 50,
+  }));
+}
+
+// Transform dashboard data
+export function transformDashboardData(dashboardData: {
+  totalUsers?: number;
+  activeUsers?: number;
+  blacklistedUsers?: number;
+  verifiedKyc?: number;
+  avgToxicityScore?: number;
+  totalTransactions?: number;
+  totalVolume?: number;
+  recentTransactions?: ApiTransaction[];
+}) {
+  return {
+    stats: {
+      totalUsers: dashboardData.totalUsers || 0,
+      activeUsers: dashboardData.activeUsers || 0,
+      blacklistedUsers: dashboardData.blacklistedUsers || 0,
+      verifiedKyc: dashboardData.verifiedKyc || 0,
+      avgToxicityScore: dashboardData.avgToxicityScore || 0,
+      totalTransactions: dashboardData.totalTransactions || 0,
+      totalVolume: dashboardData.totalVolume || 0,
+    },
+    recentTransactions: dashboardData.recentTransactions || [],
+  };
+}

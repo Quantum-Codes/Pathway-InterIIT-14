@@ -1,0 +1,253 @@
+// API service for Pathway Backend
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:8000';
+
+export interface User {
+  user_id: number;
+  aadhar_number?: string;
+  aadhar_hash?: string;
+  pan_number?: string;
+  username: string;
+  email: string;
+  phone?: string;
+  kyc_status: 'PENDING' | 'VERIFIED' | 'REJECTED';
+  credit_score?: number;
+  blacklisted: boolean;
+  blacklisted_at?: string | null;
+  current_toxicity_not?: number;
+  current_toxicity_360: number;
+  risk_category: 'LOW' | 'MEDIUM' | 'HIGH' | 'CRITICAL';
+  created_at: string;
+  updated_at: string;
+  version: number;
+}
+
+export interface Transaction {
+  transaction_id: number;
+  transaction_uuid?: string;
+  from_user_id: number;
+  to_user_id: number;
+  is_cross_bank?: boolean;
+  amount: number;
+  currency: string;
+  transaction_type: 'TRANSFER' | 'DEPOSIT' | 'WITHDRAWAL' | 'PAYMENT';
+  payment_method: 'UPI' | 'NEFT' | 'RTGS' | 'IMPS' | 'CHEQUE';
+  status: 'PENDING' | 'COMPLETED' | 'FAILED' | 'REVERSED' | 'FLAGGED';
+  fraud_score: number;
+  is_flagged: boolean;
+  transaction_time: string;
+  version?: number;
+}
+
+export interface ToxicityHistory {
+  user_id: number;
+  toxicity_not: number;
+  toxicity_360: number;
+  sanction_score: number;
+  news_score: number;
+  transaction_score: number;
+  portfolio_score: number;
+  calculation_trigger: string;
+  recorded_at: string;
+}
+
+export interface DashboardSummary {
+  totalUsers: number;
+  activeUsers: number;
+  blacklistedUsers: number;
+  verifiedKyc: number;
+  avgToxicityScore: number;
+  totalTransactions: number;
+  totalVolume: number;
+  recentTransactions: Transaction[];
+}
+
+export interface RiskDistribution {
+  LOW: number;
+  MEDIUM: number;
+  HIGH: number;
+  CRITICAL: number;
+}
+
+export interface ApiResponse<T> {
+  total?: number;
+  items: T[];
+}
+
+// Generic API request function
+async function apiRequest<T>(endpoint: string, options: RequestInit = {}): Promise<T> {
+  const url = `${API_BASE_URL}${endpoint}`;
+  
+  const config: RequestInit = {
+    headers: {
+      'Content-Type': 'application/json',
+      ...options.headers,
+    },
+    ...options,
+  };
+
+  try {
+    const response = await fetch(url, config);
+    
+    if (!response.ok) {
+      throw new Error(`API Error: ${response.status} ${response.statusText}`);
+    }
+    
+    return await response.json();
+  } catch (error) {
+    console.error(`API request failed for ${endpoint}:`, error);
+    throw error;
+  }
+}
+
+// User API functions
+export const userApi = {
+  // Get all users with filtering
+  getUsers: async (params?: {
+    q?: string;
+    kyc_status?: string;
+    minToxicity?: number;
+    maxToxicity?: number;
+    riskCategory?: string;
+    blacklisted?: boolean;
+    limit?: number;
+    offset?: number;
+  }): Promise<ApiResponse<User>> => {
+    const searchParams = new URLSearchParams();
+    if (params) {
+      Object.entries(params).forEach(([key, value]) => {
+        if (value !== undefined) {
+          searchParams.append(key, value.toString());
+        }
+      });
+    }
+    
+    const endpoint = `/users${searchParams.toString() ? `?${searchParams.toString()}` : ''}`;
+    return apiRequest<ApiResponse<User>>(endpoint);
+  },
+
+  // Get single user
+  getUser: async (userId: number): Promise<User> => {
+    return apiRequest<User>(`/users/${userId}`);
+  },
+
+  // Create new user
+  createUser: async (userData: Partial<User>): Promise<User> => {
+    return apiRequest<User>('/users', {
+      method: 'POST',
+      body: JSON.stringify(userData),
+    });
+  },
+
+  // Update user
+  updateUser: async (userId: number, userData: Partial<User>): Promise<User> => {
+    return apiRequest<User>(`/users/${userId}`, {
+      method: 'PATCH',
+      body: JSON.stringify(userData),
+    });
+  },
+
+  // Suspend user
+  suspendUser: async (userId: number): Promise<{ ok: boolean; user: User }> => {
+    return apiRequest(`/users/${userId}/suspend`, {
+      method: 'POST',
+    });
+  },
+
+  // Get user events/toxicity history
+  getUserEvents: async (userId: number): Promise<ToxicityHistory[]> => {
+    return apiRequest<ToxicityHistory[]>(`/users/${userId}/events`);
+  },
+
+  // Get toxicity history
+  getToxicityHistory: async (userId: number, limit?: number): Promise<ApiResponse<ToxicityHistory>> => {
+    const params = limit ? `?limit=${limit}` : '';
+    return apiRequest<ApiResponse<ToxicityHistory>>(`/users/${userId}/toxicity-history${params}`);
+  },
+
+  // Update toxicity
+  updateToxicity: async (userId: number, data: {
+    toxicity_not?: number;
+    toxicity_360?: number;
+    risk_category?: string;
+  }): Promise<User> => {
+    return apiRequest<User>(`/users/${userId}/toxicity-update`, {
+      method: 'POST',
+      body: JSON.stringify(data),
+    });
+  },
+
+  // Get categorized users
+  getCategorizedUsers: async (by: 'risk_category' | 'kyc_status' | 'blacklisted'): Promise<Record<string, { count: number; items: User[] }>> => {
+    return apiRequest(`/users/categorized?by=${by}`);
+  },
+};
+
+// Transaction API functions
+export const transactionApi = {
+  // Get all transactions
+  getTransactions: async (params?: {
+    user_id?: number;
+    min_amount?: number;
+    max_amount?: number;
+    status?: string;
+    limit?: number;
+    offset?: number;
+  }): Promise<ApiResponse<Transaction>> => {
+    const searchParams = new URLSearchParams();
+    if (params) {
+      Object.entries(params).forEach(([key, value]) => {
+        if (value !== undefined) {
+          searchParams.append(key, value.toString());
+        }
+      });
+    }
+    
+    const endpoint = `/transactions${searchParams.toString() ? `?${searchParams.toString()}` : ''}`;
+    return apiRequest<ApiResponse<Transaction>>(endpoint);
+  },
+
+  // Get single transaction
+  getTransaction: async (transactionId: number): Promise<Transaction> => {
+    return apiRequest<Transaction>(`/transactions/${transactionId}`);
+  },
+
+  // Create transaction
+  createTransaction: async (transactionData: Partial<Transaction>): Promise<Transaction> => {
+    return apiRequest<Transaction>('/transactions', {
+      method: 'POST',
+      body: JSON.stringify(transactionData),
+    });
+  },
+};
+
+// Dashboard API functions
+export const dashboardApi = {
+  // Get dashboard summary
+  getSummary: async (): Promise<DashboardSummary> => {
+    return apiRequest<DashboardSummary>('/dashboard/summary');
+  },
+
+  // Get risk distribution
+  getRiskDistribution: async (): Promise<RiskDistribution> => {
+    return apiRequest<RiskDistribution>('/dashboard/risk-distribution');
+  },
+
+  // Get recent transactions
+  getRecentTransactions: async (limit?: number): Promise<Transaction[]> => {
+    const params = limit ? `?limit=${limit}` : '';
+    return apiRequest<Transaction[]>(`/dashboard/recent-transactions${params}`);
+  },
+
+  // Get flagged transactions
+  getFlaggedTransactions: async (limit?: number): Promise<ApiResponse<Transaction>> => {
+    const params = limit ? `?limit=${limit}` : '';
+    return apiRequest<ApiResponse<Transaction>>(`/dashboard/flagged-transactions${params}`);
+  },
+};
+
+// Health check
+export const healthApi = {
+  check: async (): Promise<{ status: string }> => {
+    return apiRequest<{ status: string }>('/health');
+  },
+};

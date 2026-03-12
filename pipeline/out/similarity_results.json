@@ -1,0 +1,72 @@
+[
+  {
+    "query_image": "image_001.jpeg",
+    "query_image_path": "output/image_001.jpeg",
+    "most_similar_person": "\"Nirav Modi\" 1",
+    "similarity_score": 66.96,
+    "distance": 330.4388427734375,
+    "timestamp": "2025-12-07T16:00:01.775453",
+    "source_url": "https://cf-img-a-in.tosshub.com/sites/visualstory/stories/2023_02/story_23354/assets/1.jpeg?time=1676962815",
+    "source_page": "https://www.thorfamilylaw.com/?r=14066416071980"
+  },
+  {
+    "query_image": "image_003.webp",
+    "query_image_path": "output/image_003.webp",
+    "most_similar_person": "\"Nirav Modi\" 1",
+    "similarity_score": 0,
+    "distance": 1033.648193359375,
+    "timestamp": "2025-12-07T16:00:08.658419",
+    "source_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iK61LYr2yqkk/v0/-1x-1.webp",
+    "source_page": "https://www.bloomberg.com/news/articles/2023-02-20/former-diamantaire-s-gems-go-on-sale-to-pay-off-1-5-billion"
+  },
+  {
+    "query_image": "image_005.webp",
+    "query_image_path": "output/image_005.webp",
+    "most_similar_person": "\"Nirav Modi\" 1",
+    "similarity_score": 0,
+    "distance": 1246.090087890625,
+    "timestamp": "2025-12-07T16:00:09.273980",
+    "source_url": "https://i.ebayimg.com/images/g/N7kAAOSwxaFjZsW-/s-l1200.webp",
+    "source_page": "https://www.centremedicroses.net/c/cen1-37-486801-3-21-65-nirav+modi+jewellery+brand+name"
+  },
+  {
+    "query_image": "image_006.jpg",
+    "query_image_path": "output/image_006.jpg",
+    "most_similar_person": "\"Nirav Modi\" 1",
+    "similarity_score": 0,
+    "distance": 1182.730224609375,
+    "timestamp": "2025-12-07T16:00:14.348727",
+    "source_url": "https://i1.wp.com/www.preetaagarwal.com/wp-content/uploads//2016/11/NIRAV-MODI-Ad-Campaign-1050-x-507-1.jpg",
+    "source_page": "https://dotdecimal.com/?d=360323021"
+  },
+  {
+    "query_image": "image_008.jpg",
+    "query_image_path": "output/image_008.jpg",
+    "most_similar_person": "\"Nirav Modi\" 1",
+    "similarity_score": 0,
+    "distance": 1261.077880859375,
+    "timestamp": "2025-12-07T16:00:16.361037",
+    "source_url": "https://www.highheelconfidential.com/shared/content/uploads/2013/08/iijw-2013-inauguration-sonam-kapoor-roberto-cavalli-nirav-modi-1.jpg",
+    "source_page": "https://www.highheelconfidential.com/tag/sonam-kapoor/page/127/"
+  },
+  {
+    "query_image": "image_009.jpg",
+    "query_image_path": "output/image_009.jpg",
+    "most_similar_person": "\"Nirav Modi\" 1",
+    "similarity_score": 0,
+    "distance": 1022.779541015625,
+    "timestamp": "2025-12-07T16:00:17.180040",
+    "source_url": "https://i.ebayimg.com/images/g/YrYAAOSwhGhjeRB5/s-l400.jpg",
+    "source_page": "https://www.ebay.com/itm/185663903269"
+  },
+  {
+    "query_image": "image_010.jpg",
+    "query_image_path": "output/image_010.jpg",
+    "most_similar_person": "\"Nirav Modi\" 1",
+    "similarity_score": 0,
+    "distance": 1177.866943359375,
+    "timestamp": "2025-12-07T16:00:19.644402",
+    "source_url": "https://images.mid-day.com/images/images/2016/mar/7Nirav-Modi-1.jpg",
+    "source_page": "https://www.mid-day.com/entertainment/bollywood-news/article/Nirav-Modi-s-royal-weekend-17018166"
+  }
+]

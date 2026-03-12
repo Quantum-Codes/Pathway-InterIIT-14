@@ -1,0 +1,290 @@
+// Custom hooks for API data fetching
+import { useState, useEffect, useCallback, useRef } from 'react';
+import { 
+  userApi, 
+  transactionApi, 
+  dashboardApi,
+  User as ApiUser,
+  Transaction as ApiTransaction,
+  DashboardSummary,
+  RiskDistribution
+} from '../lib/api';
+import { 
+  transformApiUserToComponent, 
+  transformApiTransactionToComponent,
+  transformToxicityHistoryToEvents,
+  ComponentUser,
+  ComponentTransaction
+} from '../lib/transformers';
+
+export interface UseApiStateOptions {
+  autoFetch?: boolean;
+  onError?: (error: Error) => void;
+}
+
+export interface ApiState<T> {
+  data: T | null;
+  loading: boolean;
+  error: Error | null;
+}
+
+// Generic hook for API state management
+export function useApiState<T>(
+  initialData: T | null = null,
+  options: UseApiStateOptions = {}
+): [ApiState<T>, (asyncFn: () => Promise<T>) => Promise<void>] {
+  const [state, setState] = useState<ApiState<T>>({
+    data: initialData,
+    loading: false,
+    error: null,
+  });
+
+  const execute = useCallback(async (asyncFn: () => Promise<T>) => {
+    setState(prev => ({ ...prev, loading: true, error: null }));
+    
+    try {
+      const result = await asyncFn();
+      setState({ data: result, loading: false, error: null });
+    } catch (error) {
+      const err = error instanceof Error ? error : new Error('An error occurred');
+      setState({ data: null, loading: false, error: err });
+      
+      if (options.onError) {
+        options.onError(err);
+      } else {
+        console.error('API Error:', err);
+      }
+    }
+  }, [options]);
+
+  return [state, execute];
+}
+
+// Hook for users data
+export function useUsers(filters?: {
+  q?: string;
+  kyc_status?: string;
+  minToxicity?: number;
+  maxToxicity?: number;
+  riskCategory?: string;
+  blacklisted?: boolean;
+  limit?: number;
+  offset?: number;
+}) {
+  const [state, execute] = useApiState<ComponentUser[]>([]);
+  const [usersMap, setUsersMap] = useState<Map<number, ApiUser>>(new Map());
+  const filtersRef = useRef<string>('');
+
+  const fetchUsers = useCallback(async (currentFilters: typeof filters) => {
+    await execute(async () => {
+      const response = await userApi.getUsers(currentFilters);
+      
+      // Create users map for lookups
+      const userMap = new Map<number, ApiUser>();
+      response.items.forEach(user => {
+        userMap.set(user.user_id, user);
+      });
+      setUsersMap(userMap);
+      
+      // Transform API users to component format
+      const transformedUsers = await Promise.all(
+        response.items.map(async (apiUser) => {
+          try {
+            // Fetch user events (toxicity history)
+            const events = await userApi.getUserEvents(apiUser.user_id);
+            const userEvents = transformToxicityHistoryToEvents(events);
+            return transformApiUserToComponent(apiUser, userEvents);
+          } catch (error) {
+            console.warn(`Failed to fetch events for user ${apiUser.user_id}:`, error);
+            return transformApiUserToComponent(apiUser);
+          }
+        })
+      );
+      
+      return transformedUsers;
+    });
+  }, [execute]);
+
+  useEffect(() => {
+    const filtersKey = JSON.stringify(filters || {});
+    if (filtersKey !== filtersRef.current) {
+      filtersRef.current = filtersKey;
+      fetchUsers(filters);
+    }
+  }, [filters, fetchUsers]);
+
+  return {
+    ...state,
+    users: state.data || [],
+    usersMap,
+    refetch: fetchUsers,
+  };
+}
+
+// Hook for single user data
+export function useUser(userId: number) {
+  const [state, execute] = useApiState<ComponentUser | null>(null);
+
+  const fetchUser = useCallback(async () => {
+    if (!userId) return;
+    
+    await execute(async () => {
+      const [apiUser, events] = await Promise.all([
+        userApi.getUser(userId),
+        userApi.getUserEvents(userId).catch(() => []) // Don't fail if events can't be fetched
+      ]);
+      
+      const userEvents = transformToxicityHistoryToEvents(events);
+      return transformApiUserToComponent(apiUser, userEvents);
+    });
+  }, [execute, userId]);
+
+  useEffect(() => {
+    fetchUser();
+  }, [fetchUser]);
+
+  return {
+    ...state,
+    user: state.data,
+    refetch: fetchUser,
+  };
+}
+
+// Hook for transactions data
+export function useTransactions(filters?: {
+  user_id?: number;
+  min_amount?: number;
+  max_amount?: number;
+  status?: string;
+  limit?: number;
+  offset?: number;
+}) {
+  const [state, execute] = useApiState<ComponentTransaction[]>([]);
+  const filtersRef = useRef<string>('');
+  
+  const fetchTransactions = useCallback(async (currentFilters: typeof filters) => {
+    await execute(async () => {
+      const [transactionsResponse, usersResponse] = await Promise.all([
+        transactionApi.getTransactions(currentFilters),
+        userApi.getUsers({ limit: 1000 }) // Get all users for name lookups
+      ]);
+      
+      // Create users map for name lookups
+      const usersMap = new Map<number, ApiUser>();
+      usersResponse.items.forEach(user => {
+        usersMap.set(user.user_id, user);
+      });
+      
+      // Transform API transactions to component format
+      return transactionsResponse.items.map(apiTransaction => 
+        transformApiTransactionToComponent(apiTransaction, usersMap)
+      );
+    });
+  }, [execute]);
+
+  useEffect(() => {
+    const filtersKey = JSON.stringify(filters || {});
+    if (filtersKey !== filtersRef.current) {
+      filtersRef.current = filtersKey;
+      fetchTransactions(filters);
+    }
+  }, [filters, fetchTransactions]);
+
+  return {
+    ...state,
+    transactions: state.data || [],
+    refetch: fetchTransactions,
+  };
+}
+
+// Hook for dashboard data
+export function useDashboard() {
+  const [summaryState, executeSummary] = useApiState<DashboardSummary | null>(null);
+  const [riskDistState, executeRiskDist] = useApiState<RiskDistribution | null>(null);
+  const [flaggedTxState, executeFlaggedTx] = useApiState<ComponentTransaction[]>([]);
+
+  const fetchDashboard = useCallback(async () => {
+    // Fetch all dashboard data in parallel
+    const promises = [
+      executeSummary(() => dashboardApi.getSummary()),
+      executeRiskDist(() => dashboardApi.getRiskDistribution()),
+      executeFlaggedTx(async () => {
+        const response = await dashboardApi.getFlaggedTransactions(10);
+        const usersResponse = await userApi.getUsers({ limit: 1000 });
+        
+        const usersMap = new Map<number, ApiUser>();
+        usersResponse.items.forEach(user => {
+          usersMap.set(user.user_id, user);
+        });
+        
+        return response.items.map(tx => transformApiTransactionToComponent(tx, usersMap));
+      })
+    ];
+
+    await Promise.all(promises);
+  }, [executeSummary, executeRiskDist, executeFlaggedTx]);
+
+  useEffect(() => {
+    fetchDashboard();
+  }, [fetchDashboard]);
+
+  return {
+    summary: summaryState.data,
+    riskDistribution: riskDistState.data,
+    flaggedTransactions: flaggedTxState.data || [],
+    loading: summaryState.loading || riskDistState.loading || flaggedTxState.loading,
+    error: summaryState.error || riskDistState.error || flaggedTxState.error,
+    refetch: fetchDashboard,
+  };
+}
+
+// Hook for user actions
+export function useUserActions() {
+  const [actionState, executeAction] = useApiState<unknown>(null);
+
+  const suspendUser = useCallback(async (userId: number) => {
+    await executeAction(() => userApi.suspendUser(userId));
+  }, [executeAction]);
+
+  const updateUser = useCallback(async (userId: number, userData: Partial<ApiUser>) => {
+    await executeAction(() => userApi.updateUser(userId, userData));
+  }, [executeAction]);
+
+  const updateToxicity = useCallback(async (userId: number, data: {
+    toxicity_not?: number;
+    toxicity_360?: number;
+    risk_category?: string;
+  }) => {
+    await executeAction(() => userApi.updateToxicity(userId, data));
+  }, [executeAction]);
+
+  return {
+    loading: actionState.loading,
+    error: actionState.error,
+    suspendUser,
+    updateUser,
+    updateToxicity,
+  };
+}
+
+// Hook for health check
+export function useHealthCheck() {
+  const [state, execute] = useApiState<{ status: string } | null>(null);
+
+  const checkHealth = useCallback(async () => {
+    await execute(async () => {
+      const { healthApi } = await import('../lib/api');
+      return healthApi.check();
+    });
+  }, [execute]);
+
+  useEffect(() => {
+    checkHealth();
+  }, [checkHealth]);
+
+  return {
+    ...state,
+    isHealthy: state.data?.status === 'ok',
+    refetch: checkHealth,
+  };
+}
